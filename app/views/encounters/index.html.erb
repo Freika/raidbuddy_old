@@ -1,0 +1,14 @@
+<div class="for-group">
+<% if can? :create, @encounters %>
+  <%= link_to 'Создать энкаунтер', new_encounter_path, class: 'btn btn-primary' %>
+<% end %>
+</div>
+<br>
+<table class="table table-hover">
+<% @encounters.each do |encounter| %>
+  <tr>
+    <td><%= link_to encounter.name, encounter %></td>
+    <td><%= encounter.style %></td>
+  </tr>
+<% end %>
+</table>

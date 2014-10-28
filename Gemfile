@@ -9,7 +9,6 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
-gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'omniauth-bnet'
 gem 'simple_form'
@@ -36,4 +35,5 @@ group :development, :test do
   gem "codeclimate-test-reporter", require: nil
   gem 'simplecov', :require => false
   gem 'did_you_mean'
+  gem 'annotate'
 end

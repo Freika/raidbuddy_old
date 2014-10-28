@@ -1,0 +1,13 @@
+<%= simple_form_for encounter do |f| %>
+<div class="form-group">
+  <%= f.input :name, label: 'Название энкаунтера', class: 'form-control' %>
+</div>
+<div class="form-group">
+  <%= f.input :style, label: 'Тип', class: 'form-control' %>
+</div>
+<div class="form-group">
+  <%= f.input :description, label: 'Описание', class: 'form-control' %>
+</div>
+
+  <%= f.button :submit, value: 'Сохранить энкаунтер', class: 'btn btn-primary' %>
+<% end %>
