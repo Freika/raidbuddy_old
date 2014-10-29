@@ -13,6 +13,7 @@
 
 require 'rails_helper'
 
-RSpec.describe Encounter, :type => :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Encounter, type: :model do
+  let(:encounter) { create :encounter }
+
 end

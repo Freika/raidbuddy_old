@@ -16,4 +16,7 @@ class Encounter < ActiveRecord::Base
   EXPANSIONS = ['Vanilla', 'The Burning Crusade', 'Wrath of the Lich-King',
                 'Cataclysm', 'Mists of Pandaria', 'Warlords of Draenor']
   belongs_to :event
+  validates :name, :style, :description, :expansion, presence: :true
+  validates :style, inclusion: { in: STYLE }
+  validates :expansion, inclusion: { in: EXPANSIONS }
 end

@@ -1,2 +1,17 @@
-<h1>Events#index</h1>
-<p>Find me in app/views/events/index.html.erb</p>
+<%= link_to 'Создать событие', new_event_path, class: 'btn btn-primary' %>
+
+<br>
+<br>
+
+<% @events.each do |event| %>
+<div class="col-md-3">
+  <div class="event-card">
+    <div class="name">
+      <h5><%= event.name %></h5>
+      <div class="encounter">
+        <%=  %>
+      </div>
+    </div>
+  </div>
+</div>
+<% end %>

@@ -24,4 +24,6 @@
 class Event < ActiveRecord::Base
   has_one :encounter
   belongs_to :user
+  validates :name, :encounter_id, :startdate, :endtime, :description,
+            :playstyle, :min_level, presence: true
 end

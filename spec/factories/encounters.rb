@@ -13,11 +13,12 @@
 
 FactoryGirl.define do
   factory :encounter do
-    name "MyString"
-    type ""
-    rated "MyString"
-    difficulty "MyString"
-    challenge "MyString"
+    name 'Arathi Basin'
+    type %w( PvE PvP ).sample
+    description 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                Praesentium harum officia qui, dolore totam quia unde ratione
+                perferendis expedita non.'
+    expansion Encounter::EXPANSIONS.sample
   end
 
 end
