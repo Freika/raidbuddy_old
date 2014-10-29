@@ -1,2 +1,9 @@
-<h1>Encounters#show</h1>
-<p>Find me in app/views/encounters/show.html.erb</p>
+<h2><%= @encounter.name %></h2>
+<small><%= @encounter.style %>
+<% if can? :edit, @encounter %>
+  <%= link_to 'Редактировать', edit_encounter_path(@encounter) %></small>
+<% end %>
+<small><%= @encounter.expansion %></small>
+<p>
+  <%= @encounter.description %>
+</p>

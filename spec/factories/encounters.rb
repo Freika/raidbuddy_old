@@ -8,6 +8,7 @@
 #  created_at  :datetime
 #  updated_at  :datetime
 #  description :text
+#  expansion   :string(255)
 #
 
 FactoryGirl.define do

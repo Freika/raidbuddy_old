@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141028213449) do
+ActiveRecord::Schema.define(version: 20141029193946) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,26 @@ ActiveRecord::Schema.define(version: 20141028213449) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "description"
+    t.string   "expansion"
+  end
+
+  create_table "events", force: true do |t|
+    t.string   "name"
+    t.integer  "encounter_id"
+    t.datetime "startdate"
+    t.string   "starttime"
+    t.string   "endtime"
+    t.text     "description"
+    t.string   "playstyle"
+    t.integer  "tanks"
+    t.integer  "healers"
+    t.integer  "dps"
+    t.string   "loottype"
+    t.integer  "min_level"
+    t.integer  "min_item_level"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
   end
 
   create_table "users", force: true do |t|

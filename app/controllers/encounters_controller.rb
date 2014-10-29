@@ -18,7 +18,7 @@ class EncountersController < ApplicationController
   end
 
   def new
-    authorize! :new, @encounter, message: "Доступно только администратору."
+    authorize! :new, @encounter, message: 'Доступно только администратору.'
     @encounter = Encounter.new
   end
 
@@ -28,7 +28,7 @@ class EncountersController < ApplicationController
 
   def update
     @encounter = set_encounter
-    if @encounter.save
+    if @encounter.update(encounter_params)
       redirect_to @encounter, notice: 'Энкаунтер обновлен.'
     else
       render :edit
@@ -44,7 +44,7 @@ class EncountersController < ApplicationController
   private
 
   def encounter_params
-    params.require(:encounter).permit(:name, :style, :rated, :difficulty, :challenge)
+    params.require(:encounter).permit(:name, :style, :description, :expansion)
   end
 
   def set_encounter
