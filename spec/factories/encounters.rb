@@ -14,10 +14,10 @@
 FactoryGirl.define do
   factory :encounter do
     name "MyString"
-type ""
-rated "MyString"
-difficulty "MyString"
-challenge "MyString"
+    type ""
+    rated "MyString"
+    difficulty "MyString"
+    challenge "MyString"
   end
 
 end

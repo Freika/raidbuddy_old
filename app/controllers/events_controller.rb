@@ -47,9 +47,8 @@ class EventsController < ApplicationController
   end
 
   def event_params
-    params.require(:event).permit(:name, :encounter_id, :startdate, :starttime,
-                                  :endtime, :description, :playstyle, :tanks,
-                                  :healers, :dps, :loottype, :min_level,
-                                  :min_item_level)
+    params.require(:event).permit(:name, :encounter_id, :startdate, :endtime,
+                                  :description, :playstyle, :tanks, :healers,
+                                  :dps, :loottype, :min_level, :min_item_level)
   end
 end

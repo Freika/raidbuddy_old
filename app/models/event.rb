@@ -6,7 +6,6 @@
 #  name           :string(255)
 #  encounter_id   :integer
 #  startdate      :datetime
-#  starttime      :string(255)
 #  endtime        :string(255)
 #  description    :text
 #  playstyle      :string(255)

@@ -6,7 +6,6 @@
 #  name           :string(255)
 #  encounter_id   :integer
 #  startdate      :datetime
-#  starttime      :string(255)
 #  endtime        :string(255)
 #  description    :text
 #  playstyle      :string(255)
@@ -26,7 +25,6 @@ FactoryGirl.define do
     name "MyString"
     encounter_id 1
     startdate "2014-10-30"
-    starttime "MyString"
     endtime "MyString"
     description "MyText"
     playstyle "MyString"
