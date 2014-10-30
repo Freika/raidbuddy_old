@@ -16,6 +16,7 @@ gem 'devise'
 gem 'figaro'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'validates_timeliness', '~> 3.0'
+gem 'rails-i18n'
 
 gem 'cancancan', '~> 1.9'
 
