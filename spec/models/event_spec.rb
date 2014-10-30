@@ -22,6 +22,11 @@
 
 require 'rails_helper'
 
-RSpec.describe Event, :type => :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+describe Event, type: :model do
+  let(:event) { create :event }
+  it 'cannot be created if startdate is in the past' do
+    event.startdate = Time.now - 2.hours
+    puts event
+    expect(event).not_to be_valid
+  end
 end

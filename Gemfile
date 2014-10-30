@@ -15,6 +15,7 @@ gem 'simple_form'
 gem 'devise'
 gem 'figaro'
 gem 'bootstrap-sass', '~> 3.2.0'
+gem 'validates_timeliness', '~> 3.0'
 
 gem 'cancancan', '~> 1.9'
 
