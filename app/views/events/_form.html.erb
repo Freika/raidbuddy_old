@@ -1,16 +1,17 @@
 <%= simple_form_for event do |f| %>
-  <%= f.input :name %>
-  <%= f.input :encounter_id, collection: Encounter.all, include_blank: false %>
-  <%= f.input :startdate %>
-  <%= f.input :endtime %>
-  <%= f.input :description %>
-  <%= f.input :playstyle %>
-  <%= f.input :tanks %>
-  <%= f.input :healers %>
-  <%= f.input :dps %>
-  <%= f.input :loottype %>
-  <%= f.input :min_level %>
-  <%= f.input :min_item_level %>
+  <%= f.input :name, label: 'Название события' %>
+  <%= f.input :encounter_id, collection: Encounter.all, include_blank: false,
+    label: 'Энкаунтер' %>
+  <%= f.input :startdate, label: 'Дата и время начала' %>
+  <%= f.input :endtime, label: 'Время завершения' %>
+  <%= f.input :description, label: 'Описание события' %>
+  <%= f.input :playstyle, label: 'Стиль игры' %>
+  <%= f.input :tanks, label: 'Танки' %>
+  <%= f.input :healers, label: 'Лекари' %>
+  <%= f.input :dps, label: 'DPS' %>
+  <%= f.input :loottype, label: 'Тип разделения добычи' %>
+  <%= f.input :min_level, label: 'Минимальный уровень персонажа' %>
+  <%= f.input :min_item_level, label: 'Минимальный уровень предметов' %>
 
   <%= f.button :submit, value: 'Сохранить событие' %>
 <% end %>
